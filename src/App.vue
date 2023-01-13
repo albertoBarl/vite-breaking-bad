@@ -1,5 +1,6 @@
 <script>
 import AppContent from "./components/AppContent.vue";
+import axios from "axios";
 import { store } from "./assets/datas/store.js";
 
 export default {
@@ -18,7 +19,6 @@ export default {
     getCards() {
       axios.get(store.url).then((response) => {
         store.cardList = response.data.data;
-        console.log(store.cardList);
       });
     },
   },
