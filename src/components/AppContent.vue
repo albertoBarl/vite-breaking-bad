@@ -14,7 +14,9 @@ export default {
 };
 </script>
 <template lang="">
-  <div>
+  <div
+    class="bg-body container d-flex justify-content-center gap-5 p-5 flex-wrap"
+  >
     <appCard
       v-for="(elem, index) in store.cardList"
       :key="index"
@@ -22,4 +24,9 @@ export default {
     />
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+div.container {
+  height: 80vh;
+  overflow: auto;
+}
+</style>
