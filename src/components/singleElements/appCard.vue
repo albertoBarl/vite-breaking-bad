@@ -6,9 +6,14 @@ export default {
 };
 </script>
 <template lang="">
-  <div class="card bg-dark text-white" style="width: 200px">
+  <div class="card bg-warning border-0 text-center p-3" style="width: 200px">
     <img :src="monster.card_images[0].image_url" alt="not available" />
-    <p>{{ monster.name }}</p>
+    <p>[ {{ monster.name }} ]</p>
+    <span>- {{ monster.archetype }} -</span>
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+span {
+  text-transform: uppercase;
+}
+</style>
