@@ -36,7 +36,7 @@ export default {
         store.cardList = response.data.data;
         setTimeout(() => {
           store.isLoaded = true;
-        }, 3000);
+        }, 2000);
       });
     },
   },
