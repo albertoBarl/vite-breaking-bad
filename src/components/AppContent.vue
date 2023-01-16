@@ -1,10 +1,12 @@
 <script>
 import appCard from "./singleElements/appCard.vue";
+import appDeck from "./singleElements/appDeck.vue";
 import { store } from "../assets/datas/store.js";
 
 export default {
   components: {
     appCard,
+    appDeck,
   },
   data() {
     return {
@@ -14,6 +16,7 @@ export default {
 };
 </script>
 <template lang="">
+  <appDeck class="mb-3" />
   <div
     class="bg-body rounded container d-flex justify-content-center gap-5 p-5 flex-wrap"
   >
