@@ -1,3 +1,9 @@
+<template lang="">
+  <AppHeader />
+  <div class="p-5">
+    <AppContent />
+  </div>
+</template>
 <script>
 import AppContent from "./components/AppContent.vue";
 import AppHeader from "./components/AppHeader.vue";
@@ -26,10 +32,4 @@ export default {
   },
 };
 </script>
-<template lang="">
-  <AppHeader />
-  <div class="p-5">
-    <AppContent />
-  </div>
-</template>
 <style lang="scss"></style>
