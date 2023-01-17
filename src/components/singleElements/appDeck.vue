@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       store,
-      archetypes: ["Dark Margician", "Alien", "Laval", "Cipher"],
+      archetypes: ["Dark Magician", "Alien", "Laval", "Cipher"],
     };
   },
 };
