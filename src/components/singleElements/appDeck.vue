@@ -1,13 +1,26 @@
 <template lang="">
-  <select class="btn-body">
-    <option value="Deck-1">Deck Alien</option>
-    <option value="Deck-2">Deck 2</option>
+  <select
+    class="btn-body"
+    v-model="store.selectedGen"
+    @change="$emit('filter')"
+  >
+    <option
+      v-for="(element, index) in archetypes"
+      :value="element"
+      :key="index"
+    >
+      Deck {{ element }}
+    </option>
   </select>
 </template>
 <script>
+import { store } from "../../assets/datas/store.js";
 export default {
-  props: {
-    monster: Object,
+  data() {
+    return {
+      store,
+      archetypes: ["Dark Margician", "Alien", "Laval", "Cipher"],
+    };
   },
 };
 </script>
