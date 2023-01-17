@@ -1,4 +1,5 @@
 <template lang="">
+  <resultsMess />
   <div
     class="bg-body rounded container d-flex justify-content-center gap-5 p-5 flex-wrap"
   >
@@ -11,11 +12,13 @@
 </template>
 <script>
 import appCard from "./singleElements/appCard.vue";
+import resultsMess from "./singleElements/resultsMess.vue";
 import { store } from "../assets/datas/store.js";
 
 export default {
   components: {
     appCard,
+    resultsMess,
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template lang="">
   <div v-if="store.isLoaded">
     <AppHeader />
-    <appDeck @filter="getCards" />
+    <appDeck @filter="getCards" class="ms-5 mt-5" />
     <div class="p-5">
       <AppContent />
     </div>
