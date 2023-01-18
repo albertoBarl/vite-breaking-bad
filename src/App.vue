@@ -33,16 +33,16 @@ export default {
     };
   },
   created() {
-    this.getCards();
+    this.getCards("Dark Magician");
   },
   methods: {
-    getCards() {
-      let myUrl = `${store.url}${store.selectedGen}`;
+    getCards(par) {
+      let myUrl = `${store.url}${par}`;
       axios.get(myUrl).then((response) => {
         store.cardList = response.data.data;
-        setTimeout(() => {
-          store.isLoaded = true;
-        }, 2000);
+        // setTimeout(() => {
+        store.isLoaded = true;
+        // }, 2000);
       });
     },
   },

@@ -1,9 +1,5 @@
 <template lang="">
-  <select
-    class="btn-body"
-    v-model="store.selectedGen"
-    @change="$emit('filter')"
-  >
+  <select class="btn-body" v-model="value" @change="$emit('filter', value)">
     <option
       v-for="(element, index) in archetypes"
       :value="element"
@@ -14,12 +10,11 @@
   </select>
 </template>
 <script>
-import { store } from "../../assets/datas/store.js";
 export default {
   data() {
     return {
-      store,
       archetypes: ["Dark Magician", "Alien", "Laval", "Cipher"],
+      value: "Dark Magician",
     };
   },
 };
